@@ -416,7 +416,8 @@ req_date date not null,
 shipping_date date not null,
 store_id bigint not null,
 staff_id bigint not null,
-CONSTRAINT fk_orders_Store FOREIGN Key (store_id) REFERENCES store(store_id)
+CONSTRAINT fk_orders_Store FOREIGN Key (store_id) REFERENCES store(store_id),
+CONSTRAINT fk_orders_staff FOREIGN Key (staff_id) REFERENCES staff(staff_id)
 )
 select * from orders
 
